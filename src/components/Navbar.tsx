@@ -10,7 +10,9 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import { BellElectric } from 'lucide-react';
+import { BellElectric, LogInIcon } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Button } from './ui/button';
 
 const navLinks: { name: string; href: string }[] = [
   {
@@ -57,6 +59,18 @@ export function Navbar() {
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button className="ms-12" variant="outline" size="icon">
+                <LogInIcon className="h-4 w-4" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Login</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </NavigationMenu>
     </div>
   );
