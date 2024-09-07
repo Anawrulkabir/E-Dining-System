@@ -57,10 +57,10 @@ export function Navbar() {
             <NavigationMenu className="flex-col flex">
               <Link
                 href={'/'}
-                className="flex items-center gap-2 py-2 px-4 shadow-xl rounded-full bg-white me-12"
+                className="flex items-center gap-2 py-2 px-2 xl:px-4 shadow-xl rounded-full bg-white me-12"
               >
                 <BellElectric className="text-blue-400" />
-                <p className="font-bold italic text-blue-400">E-Dining</p>
+                <p className="font-bold italic text-sm xl:text-base text-blue-400">Dining</p>
               </Link>
               <NavigationMenuList className="flex flex-col">
                 {navLinks?.map((navLink) => (
@@ -97,10 +97,10 @@ export function Navbar() {
           <NavigationMenu>
             <Link
               href={'/'}
-              className="flex items-center gap-2 py-2 px-4 shadow-xl rounded-full bg-white me-12"
+              className="flex items-center gap-2 py-2 px-2 xl:px-4 shadow-xl rounded-full bg-white me-6 xl:me-12"
             >
               <BellElectric className="text-blue-400" />
-              <p className="font-bold italic text-blue-400">E-Dining</p>
+              <p className="font-bold text-sm xl:text-base italic text-blue-400">Dining</p>
             </Link>
             <NavigationMenuList>
               {navLinks?.map((navLink) => (
@@ -120,7 +120,7 @@ export function Navbar() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button className="ms-12" variant="outline" size="icon">
+                  <Button className="ms-6 xl:ms-12" variant="outline" size="icon">
                     <LogInIcon className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
